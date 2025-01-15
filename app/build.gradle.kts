@@ -1,7 +1,18 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
+
+val localProperties = File(rootDir, "local.properties")
+val omdbApiKey: String = if (localProperties.exists()) {
+    Properties().apply { load(localProperties.inputStream()) }.getProperty("OMDB_API_KEY", "")
+} else {
+    ""
+}
+
+println("OMDB API Key: $omdbApiKey")
 
 android {
     namespace = "com.example.popcorntime"
@@ -21,14 +32,20 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "OMDB_API_KEY", "\"$omdbApiKey\"")
+        }
+
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "OMDB_API_KEY", "\"$omdbApiKey\"")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +57,7 @@ android {
         compose = true
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -68,6 +86,12 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.lottie)
     implementation(libs.splash)
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.dagger)
+    implementation(libs.dagger.compiler)
+    implementation(libs.okhttp)
+    implementation(libs.loggingInterceptor)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

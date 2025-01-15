@@ -1,4 +1,4 @@
-package com.example.popcorntime.presentation.fragment
+package com.example.popcorntime.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
