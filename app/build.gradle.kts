@@ -1,8 +1,11 @@
 import java.util.Properties
 
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application")
+    id("kotlin-android")
+    id("kotlin-kapt")
+
+    alias(libs.plugins.composeCompiler)
 }
 
 val localProperties = File(rootDir, "local.properties")
@@ -11,8 +14,6 @@ val omdbApiKey: String = if (localProperties.exists()) {
 } else {
     ""
 }
-
-println("OMDB API Key: $omdbApiKey")
 
 android {
     namespace = "com.example.popcorntime"
@@ -88,10 +89,20 @@ dependencies {
     implementation(libs.splash)
     implementation(libs.retrofit)
     implementation(libs.gson)
-    implementation(libs.dagger)
-    implementation(libs.dagger.compiler)
+//    implementation(libs.dagger)
+//    implementation(libs.dagger.compiler)
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
+    implementation(libs.coil)
+    implementation(libs.coilCompose)
+    implementation(libs.lifecycleViewmodelCompose)
+
+//    annotationProcessor(libs.dagger.compiler)
+//    annotationProcessor(libs.google.dagger.android.processor)
+
+    implementation(libs.dagger.v216)
+    kapt(libs.dagger.compiler.v216)
+    implementation(libs.jetbrains.kotlinx.coroutines.core)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

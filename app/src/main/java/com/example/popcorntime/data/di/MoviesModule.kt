@@ -15,7 +15,7 @@ class MoviesModule {
 
     @Provides
     @Singleton
-    fun providesMovieApi(): MoviesAPI = Retrofit.Builder()
+    fun providesMovieApi(): Retrofit = Retrofit.Builder()
         .baseUrl("http://www.omdbapi.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(
@@ -41,5 +41,11 @@ class MoviesModule {
                 .build()
         )
         .build()
-        .create(MoviesAPI::class.java)
+
+    @Provides
+    @Singleton
+    fun provideMoviesAPI(retrofit: Retrofit): MoviesAPI {
+        return retrofit.create(MoviesAPI::class.java)
+    }
+
 }
