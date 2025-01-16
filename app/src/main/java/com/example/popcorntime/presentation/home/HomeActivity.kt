@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.popcorntime.PopcornTimeApplication
+import com.example.popcorntime.R
 import com.example.popcorntime.data.di.DaggerAppComponent
 import javax.inject.Inject
 
@@ -18,8 +19,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (application as PopcornTimeApplication).appComponent?.inject(this)
-
+        (application as PopcornTimeApplication).appComponent.inject(this)
+        window.statusBarColor = getColor(R.color.primary_color)
         setContent {
             HomeScreen(viewModel = homeViewModel)
         }

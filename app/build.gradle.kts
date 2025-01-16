@@ -102,7 +102,8 @@ dependencies {
 
     implementation(libs.dagger.v216)
     kapt(libs.dagger.compiler.v216)
-    implementation(libs.jetbrains.kotlinx.coroutines.core)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

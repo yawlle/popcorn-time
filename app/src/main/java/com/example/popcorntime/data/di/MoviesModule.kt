@@ -16,7 +16,7 @@ class MoviesModule {
     @Provides
     @Singleton
     fun providesMovieApi(): Retrofit = Retrofit.Builder()
-        .baseUrl("http://www.omdbapi.com/")
+        .baseUrl("https://www.omdbapi.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(
             OkHttpClient.Builder()

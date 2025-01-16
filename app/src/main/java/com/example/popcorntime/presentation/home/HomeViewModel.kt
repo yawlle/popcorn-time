@@ -14,7 +14,6 @@ import javax.inject.Inject
 
 open class HomeViewModel @Inject constructor(
     private val getMoviesBySearch: GetMoviesBySearchUseCase,
-    @IoDispatcher private val coroutineDispatcher: CoroutineDispatcher,
 ) : ViewModel() {
 
     private var movies: List<MovieSummary> = emptyList()
@@ -41,7 +40,7 @@ open class HomeViewModel @Inject constructor(
 
     private fun getHome() {
         _screenState.value = ScreenState.Loading
-        viewModelScope.launch(coroutineDispatcher) {
+        viewModelScope.launch {
             try {
                 val movies = getMoviesBySearch("Harry Potter")
                 _filteredMoviesList.value = movies.search
@@ -52,12 +51,11 @@ open class HomeViewModel @Inject constructor(
         }
     }
 
-    fun onSearchValueChange(value: String) {
+    fun onSearchButtonClicked() {
         _screenState.value = ScreenState.Loading
-        _searchValue.value = value
-        viewModelScope.launch(coroutineDispatcher) {
+        viewModelScope.launch {
             try {
-                _filteredMoviesList.value = getMoviesBySearch(value).search
+                _filteredMoviesList.value = getMoviesBySearch(_searchValue.value).search
                 _screenState.value = ScreenState.Content
                 _showNoResults.value = _filteredMoviesList.value.isEmpty()
             } catch (e: Exception) {

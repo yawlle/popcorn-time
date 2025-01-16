@@ -2,7 +2,7 @@
 <resources>
     <color name="primary_color">#eec276</color>
     <color name="secondary_color">#F8A024</color>
-    <color name="background_app">#EAF7F4</color>
+    <color name="background_app">#f7f5f2</color>
     <color name="black">#1f0e1a</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray_60">#66B9B2B2</color>
