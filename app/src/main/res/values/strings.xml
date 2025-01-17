@@ -1,4 +1,6 @@
 <resources>
+
+    <!-- HomePage -->
     <string name="app_name">PopcornTime</string>
     <string name="title_home">Welcome to PopcornTime!</string>
     <string name="text_hint_search">Search for movies or series</string>
@@ -7,6 +9,11 @@
     <string name="title_error_screen">Oops! Algo deu errado.</string>
     <string name="subtitle_error_screen">Não foi possível concluir a ação. Tente novamente.</string>
     <string name="text_not_found">Series or movie not found, please type again!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- MoviePage -->
+
+    <string name="title_synopsis">Synopsis</string>
+    <string name="title_imdb">IMDB</string>
+    <string name="title_released">Released:</string>
+    <string name="image_poster">Image Poster</string>
 </resources>

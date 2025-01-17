@@ -93,6 +93,7 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
     implementation(libs.coil)
+    implementation(libs.coil.svg)
     implementation(libs.coilCompose)
     implementation(libs.lifecycleViewmodelCompose)
     implementation(libs.dagger.v216)

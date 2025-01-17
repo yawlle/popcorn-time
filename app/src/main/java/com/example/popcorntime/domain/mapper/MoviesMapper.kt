@@ -12,7 +12,7 @@ import com.example.popcorntime.domain.model.Search
 fun RatingResponse.toRating() =
     Rating(
         source = source.orEmpty(),
-        value = source.orEmpty()
+        value = value.orEmpty()
     )
 
 fun MovieFullResponse.toMovieFull() =

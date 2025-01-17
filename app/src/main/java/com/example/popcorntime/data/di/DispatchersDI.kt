@@ -12,7 +12,6 @@ object CoroutineDispatchersModule {
     @Provides
     @IoDispatcher
     fun provideIoDispatcher(): CoroutineDispatcher {
-        println("Criando CoroutineDispatcher para IO")
         return Dispatchers.IO
     }
 }
