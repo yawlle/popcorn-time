@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_movies_popcorn"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.popcorntime.presentation.home.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/homeFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moviePageFragment"
+        android:name="com.example.popcorntime.presentation.moviePage.MoviePageFragment"
+        android:label="MoviePageFragment"
+        tools:layout="@layout/fragment_movie_page">
+
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+
+    </fragment>
+</navigation>

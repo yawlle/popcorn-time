@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.findNavController
 import com.example.popcorntime.R
 import com.example.popcorntime.databinding.ActivitySplashBinding
 import com.example.popcorntime.presentation.home.HomeActivity

@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 
     alias(libs.plugins.composeCompiler)
 }
@@ -89,21 +90,20 @@ dependencies {
     implementation(libs.splash)
     implementation(libs.retrofit)
     implementation(libs.gson)
-//    implementation(libs.dagger)
-//    implementation(libs.dagger.compiler)
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
     implementation(libs.coil)
     implementation(libs.coilCompose)
     implementation(libs.lifecycleViewmodelCompose)
-
-//    annotationProcessor(libs.dagger.compiler)
-//    annotationProcessor(libs.google.dagger.android.processor)
-
     implementation(libs.dagger.v216)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt(libs.dagger.compiler.v216)
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation(libs.kotlinx.coroutines.android.v152)
+    implementation(libs.kotlinx.coroutines.core)
+
+    implementation(libs.androidx.navigation.fragment.ktx.v253)
+    implementation(libs.androidx.navigation.ui.ktx.v253)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

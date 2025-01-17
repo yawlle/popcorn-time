@@ -2,11 +2,9 @@ package com.example.popcorntime.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.popcorntime.data.di.IoDispatcher
 import com.example.popcorntime.domain.model.MovieSummary
 import com.example.popcorntime.domain.use_cases.GetMoviesBySearchUseCase
 import com.example.popcorntime.presentation.common.ScreenState
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -15,8 +13,6 @@ import javax.inject.Inject
 open class HomeViewModel @Inject constructor(
     private val getMoviesBySearch: GetMoviesBySearchUseCase,
 ) : ViewModel() {
-
-    private var movies: List<MovieSummary> = emptyList()
 
     private val _filteredMoviesList = MutableStateFlow<List<MovieSummary>>(emptyList())
     val filteredMoviesList = _filteredMoviesList.asStateFlow()

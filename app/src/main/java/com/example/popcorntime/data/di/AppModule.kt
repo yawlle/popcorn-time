@@ -5,6 +5,7 @@ import com.example.popcorntime.data.repository.RepositoryModule
 import com.example.popcorntime.presentation.common.di.ViewModelFactoryModule
 import com.example.popcorntime.presentation.common.di.ViewModelModule
 import com.example.popcorntime.presentation.home.HomeActivity
+import com.example.popcorntime.presentation.home.HomeFragment
 import dagger.Component
 import javax.inject.Singleton
 
@@ -20,5 +21,5 @@ import javax.inject.Singleton
 )
 interface AppComponent {
     fun inject(application: PopcornTimeApplication)
-    fun inject(activity: HomeActivity)
+    fun inject(fragment: HomeFragment)
 }

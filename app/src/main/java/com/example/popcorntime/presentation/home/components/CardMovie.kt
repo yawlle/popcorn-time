@@ -1,6 +1,7 @@
 package com.example.popcorntime.presentation.home.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,7 +31,7 @@ import com.example.popcorntime.R
 import com.example.popcorntime.domain.model.MovieSummary
 
 @Composable
-fun CardMovieComponent(movie: MovieSummary) {
+fun CardMovieComponent(movie: MovieSummary, onMovieClicked: () -> Unit) {
     val painter = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
             .data(movie.poster)
@@ -43,7 +44,11 @@ fun CardMovieComponent(movie: MovieSummary) {
 
     Row(
         modifier = Modifier
-            .fillMaxWidth(), verticalAlignment = Alignment.Bottom
+            .fillMaxWidth()
+            .clickable {
+                onMovieClicked()
+            }
+        , verticalAlignment = Alignment.Bottom
     ) {
         Image(
             painter = painter,
