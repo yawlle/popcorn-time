@@ -53,7 +53,8 @@ fun MovieSummaryResponse.toMovieSummary() =
         year = year.orEmpty(),
         imdbID = imdbID.orEmpty(),
         type = type.orEmpty(),
-        poster = poster.orEmpty()
+        poster = poster.orEmpty(),
+        imdbScore = imdbScore.orEmpty()
     )
 
 fun SearchResponse.toSearch() =

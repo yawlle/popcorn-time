@@ -12,5 +12,6 @@ data class MovieSummaryResponse(
     @SerializedName("Type")
     val type: String?,
     @SerializedName("Poster")
-    val poster: String?
+    val poster: String?,
+    val imdbScore: String?
 )

@@ -39,7 +39,7 @@ open class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val movies = getMoviesBySearch("Harry Potter")
-                _filteredMoviesList.value = movies.search
+                _filteredMoviesList.value = movies
                 _screenState.value = ScreenState.Content
             } catch (e: Exception) {
                 _screenState.value = ScreenState.Error(e.message.orEmpty())
@@ -51,7 +51,7 @@ open class HomeViewModel @Inject constructor(
         _screenState.value = ScreenState.Loading
         viewModelScope.launch {
             try {
-                _filteredMoviesList.value = getMoviesBySearch(_searchValue.value).search
+                _filteredMoviesList.value = getMoviesBySearch(_searchValue.value)
                 _screenState.value = ScreenState.Content
                 _showNoResults.value = _filteredMoviesList.value.isEmpty()
             } catch (e: Exception) {
