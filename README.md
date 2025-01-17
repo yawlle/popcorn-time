@@ -55,5 +55,4 @@ Com o Data Binding, você pode vincular diretamente variáveis de dados (como Li
 Nesse projeto foi utilizado o Navigation Component, para demonstrar que ele consegue ser utilizado em conjunto com uma tela Compose normalmente.
 No entanto, trocar para o Navigation Compose é uma escolha ainda mais vantajosa, pois ele é otimizado para Jetpack Compose, proporcionando uma navegação totalmente declarativa.
 
-| ![Imagem 1]((https://github.com/user-attachments/assets/7b6d5463-24a8-45c3-853d-f167d2c951d3)) | ![home_screen](https://github.com/user-attachments/assets/f05620a5-788c-4068-9426-f348ab31e42b) | ![movie_page](https://github.com/user-attachments/assets/239dbd61-37d8-4ad1-b46c-721954a8dc19)
-
+![Popcorn](https://github.com/user-attachments/assets/61aa315d-7b5b-4e10-9667-446faa887361)
