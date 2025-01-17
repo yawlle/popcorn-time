@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.findNavController
+import com.example.popcorntime.R
 import com.example.popcorntime.databinding.ActivitySplashBinding
 import com.example.popcorntime.presentation.home.HomeActivity
 
@@ -16,6 +18,9 @@ class SplashActivity : AppCompatActivity() {
         installSplashScreen()
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
+
+        window.statusBarColor = getColor(R.color.primary_color)
+
         setContentView(binding.root)
         binding.lottieView.enableMergePathsForKitKatAndAbove(true)
         binding.lottieView.playAnimation()

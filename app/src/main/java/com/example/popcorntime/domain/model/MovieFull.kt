@@ -27,3 +27,31 @@ data class MovieFull(
     val website: String,
     val response: String
 )
+
+val initialMovieFull = MovieFull(
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    emptyList(),
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+)

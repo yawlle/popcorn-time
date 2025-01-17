@@ -5,5 +5,6 @@ data class MovieSummary(
     val year: String,
     val imdbID: String,
     val type: String,
-    val poster: String
+    val poster: String,
+    val imdbScore: String
 )
