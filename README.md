@@ -6,6 +6,7 @@ Aplicativo para buscar informações sobre filmes utilizando da OMDb API.
 - 🔍 Pesquisa de filmes por título.
 - 📜 Exibe lista de resultados com informações básicas.
 - 📊 Mostra detalhes completos, incluindo notas do IMDb.
+- Arquitetura MVVM.
 
 ## Tecnologias
 - **Kotlin**
