@@ -48,7 +48,11 @@ Ao adotar Compose de forma incremental, a equipe pode aproveitar as vantagens de
 - **XML com DataBinding:**
 Usar Data Binding no XML oferece vantagens significativas em relação a manipular dados diretamente no Fragment. Com o Data Binding, a lógica de apresentação é desacoplada da lógica de negócios, deixando o código do Fragment mais limpo e fácil de manter.
 Ele permite que você vincule dados e defina ações diretamente no XML, evitando manipulações manuais de UI e melhorando a legibilidade.
+
+
 Com o Data Binding, você pode vincular diretamente variáveis de dados (como LiveData, StateFlow ou Observable) à UI, permitindo que a interface se atualize automaticamente sempre que os dados mudam.
 - **Navigation Component:**
 Nesse projeto foi utilizado o Navigation Component, para demonstrar que ele consegue ser utilizado em conjunto com uma tela Compose normalmente.
 No entanto, trocar para o Navigation Compose é uma escolha ainda mais vantajosa, pois ele é otimizado para Jetpack Compose, proporcionando uma navegação totalmente declarativa.
+
+![Popcorn](https://github.com/user-attachments/assets/61aa315d-7b5b-4e10-9667-446faa887361)
