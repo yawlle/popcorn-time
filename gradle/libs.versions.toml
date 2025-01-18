@@ -1,5 +1,6 @@
 [versions]
 agp = "8.6.1"
+coreTesting = "2.2.0"
 daggerCompiler = "2.16"
 daggerVersion = "2.16"
 googleDaggerAndroidProcessor = "2.24"
@@ -12,6 +13,7 @@ kotlinGradlePlugin = "2.1.0"
 kotlinxCoroutinesAndroid = "1.10.1"
 kotlinxCoroutinesAndroidVersion = "1.5.2"
 kotlinxCoroutinesCore = "1.10.1"
+kotlinxCoroutinesTest = "1.10.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
 composeBom = "2024.12.01"
@@ -20,6 +22,10 @@ material = "1.12.0"
 activity = "1.9.3"
 constraintlayout = "2.2.0"
 lottie = "4.0.0"
+mockitoCore = "4.6.1"
+mockitoKotlin = "4.0.0"
+mockk = "1.12.2"
+mockkVersion = "1.13.16"
 navigationFragmentKtxVersion = "2.5.3"
 navigationSafeArgsGradlePlugin = "2.8.5"
 navigationUiKtxVersion = "2.5.3"
@@ -28,6 +34,7 @@ retrofit = "2.9.0"
 dagger = "2.52"
 okhttp = "5.0.0-alpha.11"
 coil = "2.2.2"
+turbine = "0.10.0"
 vmcompose = "2.8.7"
 kotlin = "2.1.0"
 navigationFragmentKtx = "2.8.5"
@@ -35,6 +42,7 @@ navigationUiKtx = "2.8.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 androidx-navigation-fragment-ktx-v253 = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgsGradlePlugin" }
 androidx-navigation-ui-ktx-v253 = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
@@ -60,10 +68,15 @@ kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 kotlinx-coroutines-android-v152 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+mockk-v11316 = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
 splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
@@ -74,6 +87,7 @@ coilCompose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil
 lifecycleViewmodelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "vmcompose" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 
 
 

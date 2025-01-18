@@ -42,7 +42,7 @@ open class MoviePageViewModel @Inject constructor(
                 _moviePageState.update {
                     it.copy(
                         isLoading = false,
-                        showMainLayout = true,
+                        showMainLayout = false,
                         apiError = true
                     )
                 }

@@ -99,6 +99,7 @@ dependencies {
     implementation(libs.dagger.v216)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    androidTestImplementation(libs.androidx.core.testing)
     kapt(libs.dagger.compiler.v216)
     implementation(libs.kotlinx.coroutines.android.v152)
     implementation(libs.kotlinx.coroutines.core)
@@ -106,7 +107,14 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx.v253)
     implementation(libs.androidx.navigation.ui.ktx.v253)
 
+    testImplementation(libs.mockk.v11316)
     testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.androidx.core.testing)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
