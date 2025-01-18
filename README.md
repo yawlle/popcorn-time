@@ -12,6 +12,8 @@ Aplicativo para buscar informações sobre filmes utilizando da OMDb API.
 Feito com Kotlin 2.0!
 - **Coroutines**
 - **Retrofit**
+- **XML**
+- **JUnit**
 - **Jetpack Compose**
 - **Dagger**
 - **Lottie**
